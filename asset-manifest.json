@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/jhmjunior.github.io/md-burger/static/css/main.6fb41c43.css",
-    "main.js": "/jhmjunior.github.io/md-burger/static/js/main.3be22970.js",
-    "static/media/Banner-mbl.png": "/jhmjunior.github.io/md-burger/static/media/Banner-mbl.9b328a41c1d90021c45c.png",
-    "static/media/logo_sf.png": "/jhmjunior.github.io/md-burger/static/media/logo_sf.21f8fc3b9b00168b4123.png",
-    "static/media/Banner-dkt.png": "/jhmjunior.github.io/md-burger/static/media/Banner-dkt.739fa90c5d372610ef90.png",
-    "index.html": "/jhmjunior.github.io/md-burger/index.html",
-    "main.6fb41c43.css.map": "/jhmjunior.github.io/md-burger/static/css/main.6fb41c43.css.map",
-    "main.3be22970.js.map": "/jhmjunior.github.io/md-burger/static/js/main.3be22970.js.map"
+    "main.css": "/md-burger/static/css/main.20908bc0.css",
+    "main.js": "/md-burger/static/js/main.a1f99ed4.js",
+    "static/media/Banner-mbl.png": "/md-burger/static/media/Banner-mbl.9b328a41c1d90021c45c.png",
+    "static/media/logo_sf.png": "/md-burger/static/media/logo_sf.21f8fc3b9b00168b4123.png",
+    "static/media/Banner-dkt.png": "/md-burger/static/media/Banner-dkt.739fa90c5d372610ef90.png",
+    "index.html": "/md-burger/index.html",
+    "main.20908bc0.css.map": "/md-burger/static/css/main.20908bc0.css.map",
+    "main.a1f99ed4.js.map": "/md-burger/static/js/main.a1f99ed4.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fb41c43.css",
-    "static/js/main.3be22970.js"
+    "static/css/main.20908bc0.css",
+    "static/js/main.a1f99ed4.js"
   ]
 }
