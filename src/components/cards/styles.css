@@ -1,0 +1,86 @@
+.lanches-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+  column-gap: 80px;
+  justify-items: center;
+  padding-top: 30px;
+}
+
+.card-lanche{
+  width: 500px;
+  height: 200px;
+  background-color: #27272A;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.cards-img {
+  width: 180px;
+  height: 180px;
+  justify-self: center;
+  align-self: center;
+  
+}
+
+.lanche-details {
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 12px;
+}
+
+.nome-lanche {
+  font-size: 20px;
+  font-family: "Inter", Helvetica;
+  color: #E5E7EB;
+}
+
+.lanche-description {
+  font-size: 14px;
+  font-family: "Inter", Helvetica;
+  color: #E5E7EB;
+}
+
+.valor-lanche {
+  font-size: 20px;
+  font-family: "Inter", Helvetica;
+  font-weight: bold;
+  color: #E5E7EB;
+}
+
+@media(max-width:480px){
+  .cards-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    row-gap: 8px;
+  }
+
+  .card-lanche{
+    width: 360px;
+    height: 160px;
+  }
+
+  .cards-img{
+    width: 110px;
+    height: 110px;
+  }
+
+  .lanche-details {
+    width: 210px;
+
+  }
+}

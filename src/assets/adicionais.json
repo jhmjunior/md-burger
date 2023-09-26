@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Hamburger",
+    "value": 8,
+    "ID": "000"
+  },
+
+  {
+    "name": "Cheddar",
+    "value": 4,
+    "ID": "001"
+  },
+
+  {
+    "name": "Muçarela",
+    "value": 4,
+    "ID": "002"
+  },
+
+  {
+    "name": "Bacon",
+    "value": 4,
+    "ID": "003"
+  },
+
+  {
+    "name": "Molho Especial",
+    "value": 4,
+    "ID": "00004"
+  },
+
+  {
+    "name": "Refrigerante Lata",
+    "value": 5,
+    "ID": "005"
+  }
+]

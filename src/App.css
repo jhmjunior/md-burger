@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 200px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  background-image: url('./assets/Banner-dkt.png');
+  background-size: cover;
+  
+  background-position: 50% 50%;
+}
+
+#logo {
+  width: 151px;
+  height: 113px;
+  padding-top: 20px;
+}
+
+#h_description1 {
+  text-align: center;
+  font-size:24px;
+  color: #27272A;
+  -webkit-text-stroke: 1px #f9fafb;
+  font-family: "Inter", Helvetica;
+  font-weight: bold;
+}
+
+#h_description2 {
+  text-align: center;
+  font-size: 12px bold;
+  color: #27272A;
+  -webkit-text-stroke: 1px #f9fafb;
+  font-family: "Inter", Helvetica;
+  font-weight: bold;
+}
+
+.sub-menus {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #FBBF24;
+  font-size: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Inter", Helvetica;
+  font-weight: bold;
+  color: #27272A;
 }
 
-.App-link {
-  color: #61dafb;
+
+.carrinho-img {
+  width: 29px;
+  height: 26px;
+  padding-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media(max-width:480px){
+  header {
+    background-image: url('./assets/Banner-mbl.png');
   }
 }
