@@ -2,37 +2,37 @@
   {
     "title": "Cheese Burger",
     "description": "Pão de brioche, burger artesanal, cheddar, cebola filetada e molho especial da casa.",
-    "path_img": "md-burger/images/cheese-burger-OG.jpeg",
+    "path_img": "./md-burger/images/cheese-burger-OG.jpeg",
     "value": 15
   },
   {
     "title": "Choripán | Terezinha",
     "description": "Pão francês, linguiça suína, muçarela e chimichurri fresco.",
-    "path_img": "md-burger/images/Choripan.png",
+    "path_img": "./md-burger/images/Choripan.png",
     "value": 17
   },
   {
     "title": "Cheese Bacon",
     "description": "Pão de brioche, alface, tomate, burger artesanal, cheddar, cebola roxa filetada, bacon.",
-    "path_img": "md-burger/images/cheese-bacon-OG.jpeg",
+    "path_img": "./md-burger/images/cheese-bacon-OG.jpeg",
     "value": 20
   },
   {
     "title": "Salad Bacon",
     "description": "Pão de brioche, alface, tomate, burger artesanal, muçarela, cebola filetada, picles e bacon.",
-    "path_img": "./md-burger/images/Salad-Bacon.png",
+    "path_img": "././md-burger/images/Salad-Bacon.png",
     "value": 20
   },
   {
     "title": "Bacon Onion",
     "description": "Pão de brioche, burger artesanal, cheddar, cebola caramelizada, picles e bacon.",
-    "path_img": "md-burger/images/Bacon-Onion-OG.jpeg",
+    "path_img": "./md-burger/images/Bacon-Onion-OG.jpeg",
     "value": 20
   },
   {
     "title": "Double Smash Burger",
     "description": "Pão de brioche, 2 burgers artesanais, cheddar, cebola roxa filetada e bacon.",
-    "path_img": "md-burger/images/Double-Smash.png",
+    "path_img": "./md-burger/images/Double-Smash.png",
     "value": 25
   }
 ]
