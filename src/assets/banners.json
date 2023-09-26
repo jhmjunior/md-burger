@@ -20,7 +20,7 @@
   {
     "title": "Salad Bacon",
     "description": "Pão de brioche, alface, tomate, burger artesanal, muçarela, cebola filetada, picles e bacon.",
-    "path_img": "././md-burger/images/Salad-Bacon.png",
+    "path_img": "./md-burger/images/Salad-Bacon.png",
     "value": 20
   },
   {
