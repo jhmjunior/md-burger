@@ -109,8 +109,8 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
             itemValue={itemValue} 
             setAdicional={setAdicional} 
             adicional={adicional} 
-            setCarrinho={setCarrinho}/>
-            
+            setCarrinho={setCarrinho}
+          />  
           </ModalWrapper>
         </Background>
       ) : showChartModal ? (

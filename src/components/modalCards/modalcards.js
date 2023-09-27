@@ -101,12 +101,14 @@ const ModalFooter = styled.div`
 function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcValue, adcName}) {
 
   const [adicional, setAdicional] = useState([])
-
+  const [somaAdc, setSomaAdc] = useState(0)
 
   const adicionalPlus = (index) => {
     let aux=adicional
     aux[index] = aux[index]+1
     setAdicional(aux)
+    setSomaAdc(adcSum())
+
   }
 
   const adicionalMinus = (index) => {
@@ -114,6 +116,7 @@ function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcVa
       let aux=adicional
       aux[index] = aux[index]-1
       setAdicional(aux)
+      setSomaAdc(adcSum())
     }
   }
 
@@ -122,8 +125,21 @@ function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcVa
       return (0)
     }))
   }, [])
-  
-  
+
+
+  function adcSum() {
+    let adcsum = 0
+
+
+    for (let i = 0; i < adcData.length; i++) {
+      const item = adcData[i];
+      const quantidade = adicional[i]
+      adcsum += parseInt(item.value)*quantidade
+    }
+    
+    return(adcsum)  
+  }
+
 
   return (
     <>
@@ -137,14 +153,25 @@ function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcVa
         Adicionais:
       </AdicicionalDiv>
       <AdicionaisOptions>
-        <AdicionalContainer adicionalPlus={adicionalPlus} adicionalMinus={adicionalMinus} adicional={adicional}/>
+        <AdicionalContainer 
+          adicionalPlus={adicionalPlus} 
+          adicionalMinus={adicionalMinus} 
+          adicional={adicional}
+        />
       </AdicionaisOptions>
       <ObservacaoDiv>
         Possui alguma observação?
       </ObservacaoDiv>
       <Observations />
       <ModalFooter>
-        <AddToChart itemValue={itemValue} setCarrinho={setCarrinho} title={title} adicional={adicional} adcData={adcData}/>
+        <AddToChart
+          somaAdc = {somaAdc}
+          itemValue={itemValue} 
+          setCarrinho={setCarrinho} 
+          title={title} 
+          adicional={adicional} 
+          adcData={adcData}
+        />
         
       </ModalFooter>
     </>

@@ -112,7 +112,7 @@ const FooterBtnPlus = styled.button`
 
 
 
-function AddToChart({itemValue, onClick, setCarrinho, title, adicional, adcData}) {
+function AddToChart({itemValue, onClick, setCarrinho, title, adicional, adcData, somaAdc}) {
 
   const [quantityBtnNum, quantityBtnSetNum] = useState(1);
   const addBtnQuantity = () => {
@@ -130,8 +130,9 @@ function AddToChart({itemValue, onClick, setCarrinho, title, adicional, adcData}
     }
   }
 
-  let itemPrice = itemValue
-  let totalPrice = (itemPrice*quantityBtnNum).toFixed(2)
+  let itemPrice = parseInt(itemValue)+somaAdc
+  let totalPrice = itemPrice*quantityBtnNum
+  console.log(totalPrice)
   
 
 
@@ -157,7 +158,7 @@ function AddToChart({itemValue, onClick, setCarrinho, title, adicional, adcData}
         </FooterBtnContainer >
         <AddButton onClick={onClick} defaultValue={itemValue}>  
          Adicionar: <br/>
-         R$ {totalPrice}
+         R$ {totalPrice.toFixed(2)}
         </AddButton>
       </AddButtonDiv>
     </>

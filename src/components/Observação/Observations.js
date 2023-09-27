@@ -24,8 +24,6 @@ const ObsInput = styled.textarea`
   flex-direction: row;
   width: 90%;
   height: 125px;
-  display: flex;
-  border: solid green 1px;
   border-radius: 10px;
   padding: 12px 6px;
   font-family: "Inter", Helvetica;
