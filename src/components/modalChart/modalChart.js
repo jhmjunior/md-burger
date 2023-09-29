@@ -53,7 +53,7 @@ function ModalChart({ pedido, setPedido }) {
       </SubMenuDiv>
       <ChoiceContainer>
         
-          {pedido.lenght >0  ? pedido.map((item, index) => {
+          {pedido ? pedido.map((item, index) => {
             return (<ChoiceDetails
               key={index}
               index={index}
