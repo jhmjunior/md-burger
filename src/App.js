@@ -12,7 +12,8 @@ function App() {
   const [showChartModal, setShowChartModal] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
-  const [carrinho, setCarrinho] = useState([]);
+  const [pedido, setPedido] = useState([])
+  
 
   const handleShowChartModal = () => {
     setShowChartModal(prev =>!prev);
@@ -21,7 +22,6 @@ function App() {
 
   const handleShowButton = () => {
     setShowButton(prev => !prev)
-
   }
 
   return (
@@ -38,8 +38,8 @@ function App() {
       </header>
       
       <div className='sub-menus'>Lanches</div>
-      <Cards setShowButton={handleShowButton} setCarrinho={setCarrinho}/>
-      <ChartButton showButton={showButton} onClick={handleShowChartModal}>
+      <Cards setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido}/>
+      <ChartButton showButton={showButton} onClick={handleShowChartModal} pedido={pedido} setPedido={setPedido}>
         <img className='carrinho-img' src={Carrinho}></img>Ver carrinho
       </ChartButton>
     </>

@@ -3,14 +3,15 @@ import './styles.css';
 import data from '../../assets/banners.json'
 import Card from "../card";
 
-function Cards({setShowButton, setCarrinho}) {
+function Cards({setShowButton, pedido, setPedido}) {
 
   return (
     <div className='lanches-container'>
       <div className='cards-content'>
         {data.map((item) => {
           return(<Card
-            setCarrinho={setCarrinho}
+            pedido={pedido}
+            setPedido={setPedido}
             key={item.title}
             title={item.title}
             description={item.description}

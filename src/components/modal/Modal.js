@@ -79,7 +79,7 @@ const ModalWrapper = styled.div`
 
 
 
-export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho }) => {
+export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido }) => {
 
   const [adicional, setAdicional] = useState([])
 
@@ -110,6 +110,10 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
             setAdicional={setAdicional} 
             adicional={adicional} 
             setCarrinho={setCarrinho}
+            setShowModal={setShowModal}
+            pedido={pedido}
+            setPedido={setPedido}
+            title={title}
           />  
           </ModalWrapper>
         </Background>
@@ -118,9 +122,12 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
           <ModalWrapper showChartModal={showChartModal}>
             <HeaderModal>
               <CloseModalButton onClick={() => setShowChartModal()} />
-              <Title>Voltar</Title>
-              <ModalChart />
+              <Title>Revise seu Pedido</Title>
             </HeaderModal>
+            <ModalChart 
+              pedido={pedido}
+              setPedido={setPedido}
+            />
           </ModalWrapper>
         </Background>
       ) : null}

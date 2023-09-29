@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "../modal/Modal";
 import './styles.css';
 
-function Card({ setShowButton, title, description, item_value, path_img, setCarrinho }) {
+function Card({ setShowButton, title, description, item_value, path_img, pedido, setPedido }) {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -14,7 +14,7 @@ function Card({ setShowButton, title, description, item_value, path_img, setCarr
 
   return (
     <>
-      <Modal showModal={showModal} setShowModal={handleShowModal} title={title} description={description} itemImg={path_img} itemValue={item_value} setCarrinho={setCarrinho} />
+      <Modal showModal={showModal} setShowModal={handleShowModal} title={title} description={description} itemImg={path_img} itemValue={item_value} setPedido={setPedido} pedido={pedido} />
 
       <div className="card-lanche" onClick={() => {
         handleShowModal();

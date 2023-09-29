@@ -8,9 +8,8 @@ const AdicionalOption = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 30px;
-  
-  
+  height: 180px;
+ 
 `
 
 
@@ -20,11 +19,11 @@ function AdicionalContainer({adicional, adicionalMinus, adicionalPlus, adcValue,
     <AdicionalOption>
       {adcData.map((item, index) => {
         return(<AdicionalCard
+          key={index}
           index={index}
           adicional={adicional}
           adicionalMinus={adicionalMinus}
           adicionalPlus={adicionalPlus}
-          key={item.title}
           adcName={item.name}
           adcValue={parseInt(item.value).toFixed(2)}
           adcID={item.ID}

@@ -46,7 +46,7 @@ const ItemDescription = styled.div`
   }
 `
 
-const AdicicionalDiv = styled.div`
+const SubMenuDiv = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@ const AdicicionalDiv = styled.div`
   font-family: "Inter", Helvetica;
   font-weight: bold;
   color: #27272A;
-  margin-top: 16px;
+  margin-top: 8px;
 
   @media(max-width:480px){
     padding-left: 8px;
@@ -73,22 +73,6 @@ const AdicionaisOptions = styled.div`
   }
 `
 
-const ObservacaoDiv = styled.div`
-  height: 50px;
-  display: flex;
-  align-items: center;
-  background-color: #FBBF24;
-  font-size: 24px;
-  padding-left: 16px;
-  font-family: "Inter", Helvetica;
-  font-weight: bold;
-  color: #27272A;
-  margin-top: 160px;
-
-  @media(max-width:480px){
-    padding-left: 8px;
-  }
-`
 const ModalFooter = styled.div`
   width: 100%;
   height: 110px;
@@ -98,14 +82,14 @@ const ModalFooter = styled.div`
   align-items: center;
 `
 
-function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcValue, adcName}) {
+function ModalCards({ description, itemImg, itemValue, title, setShowModal, pedido, setPedido }) {
 
   const [adicional, setAdicional] = useState([])
   const [somaAdc, setSomaAdc] = useState(0)
 
   const adicionalPlus = (index) => {
-    let aux=adicional
-    aux[index] = aux[index]+1
+    let aux = adicional
+    aux[index] = aux[index] + 1
     setAdicional(aux)
     setSomaAdc(adcSum())
 
@@ -113,8 +97,8 @@ function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcVa
 
   const adicionalMinus = (index) => {
     if (adicional[index] > 0) {
-      let aux=adicional
-      aux[index] = aux[index]-1
+      let aux = adicional
+      aux[index] = aux[index] - 1
       setAdicional(aux)
       setSomaAdc(adcSum())
     }
@@ -134,11 +118,31 @@ function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcVa
     for (let i = 0; i < adcData.length; i++) {
       const item = adcData[i];
       const quantidade = adicional[i]
-      adcsum += parseInt(item.value)*quantidade
+      adcsum += parseInt(item.value) * quantidade
     }
-    
-    return(adcsum)  
+
+    return (adcsum)
   }
+
+  function definirPedido(totalPrice) {
+
+    let adicionais = []
+    for (let adcIndex = 0; adcIndex < adicional.length; adcIndex++) {
+      adicionais = [...adicionais, {
+        adicional: adcData[adcIndex],
+        quantidade: adicional[adcIndex]
+      }];
+
+    }
+    setPedido([...pedido, { burgerName: title, burgerValue: totalPrice, adicionais: adicionais }])
+  }
+
+  useEffect(() => {
+    console.log(pedido)
+  }, [pedido])
+
+
+
 
 
   return (
@@ -149,30 +153,30 @@ function ModalCards({ description, itemImg, itemValue, setCarrinho, title, adcVa
           {description}
         </ItemDescription>
       </ModalContent>
-      <AdicicionalDiv>
+      <SubMenuDiv>
         Adicionais:
-      </AdicicionalDiv>
+      </SubMenuDiv>
       <AdicionaisOptions>
-        <AdicionalContainer 
-          adicionalPlus={adicionalPlus} 
-          adicionalMinus={adicionalMinus} 
+        <AdicionalContainer
+          adicionalPlus={adicionalPlus}
+          adicionalMinus={adicionalMinus}
           adicional={adicional}
         />
       </AdicionaisOptions>
-      <ObservacaoDiv>
+      <SubMenuDiv>
         Possui alguma observação?
-      </ObservacaoDiv>
+      </SubMenuDiv>
       <Observations />
       <ModalFooter>
         <AddToChart
-          somaAdc = {somaAdc}
-          itemValue={itemValue} 
-          setCarrinho={setCarrinho} 
-          title={title} 
-          adicional={adicional} 
+          somaAdc={somaAdc}
+          itemValue={itemValue}
+          adicional={adicional}
           adcData={adcData}
+          setShowModal={setShowModal}
+          onClick={definirPedido}
         />
-        
+
       </ModalFooter>
     </>
   )
