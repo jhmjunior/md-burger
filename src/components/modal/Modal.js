@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import ModalCards from '../modalCards/modalcards'
-import adcData from '../../assets/adicionais.json'
 import ModalChart from '../modalChart/modalChart'
+import ModalOrder from '../modalOrder/modalOrder'
 
 const CloseModalButton = styled.div`
   cursor: pointer;
@@ -62,8 +62,9 @@ const ModalWrapper = styled.div`
   width: 1024px;
   height: 100%;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
+  background: #E5E7EB;
+  color: #27272A;
+  font-family: "Inter", Helvetica;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -79,12 +80,14 @@ const ModalWrapper = styled.div`
 
 
 
-export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido }) => {
+export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido, setShowOrder, showOrder }) => {
 
   const [adicional, setAdicional] = useState([])
 
-  
-  
+  const handleShowOrderModal = () => {
+    setShowOrder(prev =>!prev);
+  }
+
   // useEffect(() => {
   //   setAdicional(adcData.map((item) => {
   //     return (0)
@@ -93,7 +96,7 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
   // useEffect(() => {
   //   console.log(adicional)
   // }, [adicional])
-  
+
   return (
     <>
       {showModal ? (
@@ -103,18 +106,18 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
               <CloseModalButton onClick={() => setShowModal()} />
               <Title>{title}</Title>
             </HeaderModal>
-          <ModalCards 
-            description={description} 
-            itemImg={itemImg} 
-            itemValue={itemValue} 
-            setAdicional={setAdicional} 
-            adicional={adicional} 
-            setCarrinho={setCarrinho}
-            setShowModal={setShowModal}
-            pedido={pedido}
-            setPedido={setPedido}
-            title={title}
-          />  
+            <ModalCards
+              description={description}
+              itemImg={itemImg}
+              itemValue={itemValue}
+              setAdicional={setAdicional}
+              adicional={adicional}
+              setCarrinho={setCarrinho}
+              setShowModal={setShowModal}
+              pedido={pedido}
+              setPedido={setPedido}
+              title={title}
+            />
           </ModalWrapper>
         </Background>
       ) : showChartModal ? (
@@ -124,10 +127,21 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
               <CloseModalButton onClick={() => setShowChartModal()} />
               <Title>Revise seu Pedido</Title>
             </HeaderModal>
-            <ModalChart 
+            <ModalChart
               pedido={pedido}
               setPedido={setPedido}
+              setShowChartModal={setShowChartModal}
             />
+          </ModalWrapper>
+        </Background>
+      ) : showOrder ? (
+        <Background>
+          <ModalWrapper>
+            <HeaderModal>
+              <CloseModalButton onClick={() => setShowOrder()} />
+              <Title>Confirmar Pedido</Title>
+            </HeaderModal>
+            <ModalOrder />
           </ModalWrapper>
         </Background>
       ) : null}

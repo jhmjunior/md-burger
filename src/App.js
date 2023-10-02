@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Modal showChartModal={showChartModal} setShowChartModal={handleShowChartModal} />
+      <Modal showChartModal={showChartModal} pedido={pedido} setPedido={setPedido}setShowChartModal={handleShowChartModal} />
       <header>
         <img src={Logo} id='logo'></img>
         <div id='h_description1'>

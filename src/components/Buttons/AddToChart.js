@@ -67,18 +67,20 @@ const FooterBtnMinus = styled.button`
   }
 `
 
-const FooterQuantity = styled.input`
+const FooterQuantity = styled.div`
+  display: flex;
   font-family: "Inter", Helvetica;
   color: #27272A;
-  outline: none;
+  background-color: #E5E7EB;
   width: 50px;
   height: 50px;
-  text-align: center;
   border: none;
-  align-self: center;
+  justify-content: center;
+  font-size: 32px;
+  align-items: center;
 
   @media(max-width:480px){
-      width: 20px;
+      align-items: flex-start;
   }
   
 `
@@ -112,27 +114,25 @@ const FooterBtnPlus = styled.button`
 
 
 
-function AddToChart({itemValue, onClick, somaAdc, setShowModal}) {
+function AddToChart({ itemValue, onClick, somaAdc, setShowModal }) {
 
   const [quantityBtnNum, quantityBtnSetNum] = useState(1);
   const addBtnQuantity = () => {
-    quantityBtnSetNum(quantityBtnNum+1)
+    quantityBtnSetNum(quantityBtnNum + 1)
   }
 
-  // const handleChange = (event) => {
-  //   quantityBtnSetNum(event.target.value)
-  // }
+
 
   const remBtnQuantity = () => {
-    quantityBtnSetNum(quantityBtnNum-1)
+    quantityBtnSetNum(quantityBtnNum - 1)
     if (quantityBtnNum <= 1) {
       quantityBtnSetNum(1)
     }
   }
 
-  let itemPrice = parseInt(itemValue)+somaAdc
-  let totalPrice = itemPrice*quantityBtnNum
-  
+  let itemPrice = parseInt(itemValue) + somaAdc
+  let totalPrice = itemPrice * quantityBtnNum
+
 
   return (
     <>
@@ -143,24 +143,22 @@ function AddToChart({itemValue, onClick, somaAdc, setShowModal}) {
           >
             -
           </FooterBtnMinus>
-          <FooterQuantity 
-            type='number'
-            value={quantityBtnNum}
-            onChange={quantityBtnSetNum}
-          />
+          <FooterQuantity>
+            {quantityBtnNum}
+          </FooterQuantity>
           <FooterBtnPlus
             onClick={addBtnQuantity}
           >
             +
           </FooterBtnPlus>
         </FooterBtnContainer >
-        <AddButton onClick={() =>
-        {
-        onClick(totalPrice);
-        setShowModal();}}
-         defaultValue={itemValue}>  
-         Adicionar: <br/>
-         R$ {totalPrice.toFixed(2)}
+        <AddButton onClick={() => {
+          onClick(totalPrice /quantityBtnNum, quantityBtnNum);
+          setShowModal();
+        }}
+          defaultValue={itemValue}>
+          Adicionar: <br />
+          R$ {totalPrice.toFixed(2)}
         </AddButton>
       </AddButtonDiv>
     </>

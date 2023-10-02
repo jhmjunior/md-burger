@@ -124,22 +124,31 @@ function ModalCards({ description, itemImg, itemValue, title, setShowModal, pedi
     return (adcsum)
   }
 
-  function definirPedido(totalPrice) {
+  function definirPedido(totalPrice, quantidade) {
 
+    
     let adicionais = []
     for (let adcIndex = 0; adcIndex < adicional.length; adcIndex++) {
       adicionais = [...adicionais, {
         adicional: adcData[adcIndex],
         quantidade: adicional[adcIndex]
       }];
-
     }
-    setPedido([...pedido, { burgerName: title, burgerValue: totalPrice, adicionais: adicionais }])
+    
+    let itens = []
+    for (let i = 0; i < quantidade; i++) {
+      itens = [...itens, { burgerName: title, burgerValue: totalPrice, adicionais: adicionais }]
+    }
+  
+
+    setPedido([...pedido, ...itens ])
   }
 
-  useEffect(() => {
-    console.log(pedido)
-  }, [pedido])
+
+
+  // useEffect(() => {
+  //   console.log(pedido)
+  // }, [pedido])
 
 
 
