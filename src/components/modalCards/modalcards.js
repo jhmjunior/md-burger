@@ -14,15 +14,21 @@ const ModalContent = styled.div`
   width: 90%;
   height: 430px;
   
+  @media(max-width:720px){
+    flex-direction: column;
+  }
+
   @media(max-width:480px){
     height: 350px;
     flex-direction: column;
   }
+
+  
 `
 
 const ItemImage = styled.img`
-  width: 720px;
-  height: 430px;
+  width: 90%;
+  height: 90%;
   
   @media(max-width:480px){
     width: 250px;
@@ -82,7 +88,7 @@ const ModalFooter = styled.div`
   align-items: center;
 `
 
-function ModalCards({ description, itemImg, itemValue, title, setShowModal, pedido, setPedido }) {
+function ModalCards({ description, itemImg, itemValue, title, setShowModal, pedido, setPedido, obsInfo, setObsInfo }) {
 
   const [adicional, setAdicional] = useState([])
   const [somaAdc, setSomaAdc] = useState(0)
@@ -137,18 +143,12 @@ function ModalCards({ description, itemImg, itemValue, title, setShowModal, pedi
     
     let itens = []
     for (let i = 0; i < quantidade; i++) {
-      itens = [...itens, { burgerName: title, burgerValue: totalPrice, adicionais: adicionais }]
+      itens = [...itens, { burgerName: title, burgerValue: totalPrice, adicionais: adicionais, observacoes:obsInfo }]
     }
   
 
     setPedido([...pedido, ...itens ])
   }
-
-
-
-  // useEffect(() => {
-  //   console.log(pedido)
-  // }, [pedido])
 
 
 
@@ -175,7 +175,10 @@ function ModalCards({ description, itemImg, itemValue, title, setShowModal, pedi
       <SubMenuDiv>
         Possui alguma observação?
       </SubMenuDiv>
-      <Observations />
+      <Observations 
+        obsInfo={obsInfo}
+        setObsInfo={setObsInfo}
+      />
       <ModalFooter>
         <AddToChart
           somaAdc={somaAdc}

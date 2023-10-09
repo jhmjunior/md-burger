@@ -30,18 +30,9 @@ const ObsInput = styled.textarea`
   color: #27272A;
   
 `
-const DeliveryValue = styled.div`
-  display: flex;
-  width: 90%;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-top: 8px;
-  font-family: "Inter", Helvetica;
-  font-weight: bold;
-  color: #27272A;
-`
 
-function Observations () {
+
+function Observations ({obsInfo, setObsInfo}) {
   const [count, setCount] = useState(0)
   
   return (
@@ -50,10 +41,9 @@ function Observations () {
         <CharacterCount>
           {count}/150
         </CharacterCount>
-        <ObsInput onChange={e => setCount(e.target.value.length)} maxLength={150} />
-        <DeliveryValue>
-          Taxa de Entrega: R$ 3,00.
-        </DeliveryValue>  
+        <ObsInput onChange={e => {setCount(e.target.value.length); setObsInfo(e.target.value)}} maxLength={150}
+        placeholder='Ex. Remover a cebola.' />
+        
       </ObsDiv>
     </>
   )

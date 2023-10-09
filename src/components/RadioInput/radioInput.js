@@ -27,11 +27,8 @@ const RadioLabel = styled.label`
   color: #27272A;
 `
 
-function RadioInput() {
+function RadioInput({dinheiro, setDinheiro, isTroco, setIsTroco, trocoValue, setTrocoValue, setCartao, setPix}) {
 
-  const [dinheiro, setDinheiro]=useState(false)
-  const [trocoValue, setTrocoValue]=useState(false)
-  const [troco, setTroco] = useState('')
 
   return (
 
@@ -44,8 +41,8 @@ function RadioInput() {
                 type='radio'
                 id='Dinheiro'
                 value="Dinheiro"
-                Name='PaymentMethod'
-                onClick={() => setDinheiro(true)}
+                name='PaymentMethod'
+                onClick={() => {setDinheiro(true); setCartao(false); setPix(false)}}
               />
               <RadioLabel for="Dinheiro">Dinheiro</RadioLabel>
               <div className='check' />
@@ -55,8 +52,8 @@ function RadioInput() {
                 type='radio'
                 id='Cartao'
                 value="Débito/Crédito"
-                Name='PaymentMethod'
-                onClick={() => {setDinheiro(false); setTrocoValue(false)}}
+                name='PaymentMethod'
+                onClick={() => {setDinheiro(false); setIsTroco(false); setCartao(true); setPix(false); setTrocoValue('')}}
               />
               <RadioLabel for="Cartao">Débito/Crédito</RadioLabel>
               <div className='check' />
@@ -66,8 +63,8 @@ function RadioInput() {
                 type='radio'
                 id='Pix'
                 value="Pix"
-                Name='PaymentMethod'
-                onClick={() => {setDinheiro(false); setTrocoValue(false)}}
+                name='PaymentMethod'
+                onClick={() => {setDinheiro(false); setIsTroco(false); setCartao(false); setPix(true); setTrocoValue('')}}
               />
               <RadioLabel for="Pix">Pix</RadioLabel>
               <div className='check' />
@@ -83,8 +80,8 @@ function RadioInput() {
                 type='radio'
                 id='DinheiroYes'
                 value="Sim"
-                Name='DinheiroYorN'
-                onClick={() => setTrocoValue(true)}
+                name='DinheiroYorN'
+                onClick={() => setIsTroco(true)}
                 />
               <RadioLabel for="DinheiroYes">Sim</RadioLabel>
             <div className='check' />
@@ -94,8 +91,8 @@ function RadioInput() {
                 type='radio'
                 id='DinheiroNo'
                 value="Não"
-                Name='DinheiroYorN'
-                onClick={() => setTrocoValue(false)}
+                name='DinheiroYorN'
+                onClick={() => {setIsTroco(false); setTrocoValue('')}}
                 />
               <RadioLabel for="DinheiroNo">Não</RadioLabel>
               <div className='check' />
@@ -104,18 +101,19 @@ function RadioInput() {
           
         </div>
         }
-        {trocoValue &&
+        {isTroco &&
         <div className='container'>
           <TrocoAlign>
           <h2>Para quanto?</h2> 
           <CurrencyInputMask 
-            value={troco}
-            onChange={(e) => setTroco(e.target.value)}
+            value={trocoValue}
+            onChange={(e) => setTrocoValue(e.target.value)}
             />
           </TrocoAlign>
         </div>
         }
       </RadioWrapp>
+      
     </>
   )
 }

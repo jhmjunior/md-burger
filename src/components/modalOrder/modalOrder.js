@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import PhoneInputMask from '../MaskedInputs/PhoneInputMask';
 import RadioInput from '../RadioInput/radioInput';
+import WhatsappBtn from '../Buttons/WhatsappBtn';
+import DisabledWABtn from '../Buttons/DisabledWABtn'
 
 const SubMenuDiv = styled.div`
   height: 50px;
@@ -114,14 +116,66 @@ const PhoneDiv = styled.div`
   }
 `
 
-function ModalOrder() {
+const AppLink = styled.a`
+  &:link{
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+`
 
-  
+function ModalOrder({pedido}) {
+
 
   const [nome, setNome] = useState('');
   const [endereco, setEndereco] = useState('');
+  const [endNum, setEndNum] = useState('');
   const [telefone, setTelefone] = useState('');
+  const [bairro, setBairro] = useState('');
+  const [complemento, setComplemento] = useState('');
+  const [dinheiro, setDinheiro] = useState(false)
+  const [isTroco, setIsTroco] = useState(false)
+  const [trocoValue, setTrocoValue] = useState('')
+  const [cartao, setCartao] = useState(false)
+  const [pix, setPix] = useState(false)
+
+
+  let pedidoFinal = ''
+  for (let i = 0; i < pedido.length; i++) {
+    const item = pedido[i]
+    
+
+    pedidoFinal += `*Lanche:* ${item.burgerName}%0A`
+    for (let a = 0; a < item.adicionais.length; a++) {
+      if (item.adicionais[a].quantidade > 0) {
+        pedidoFinal += `*Adicionais:*%0A${item.adicionais[a].quantidade}X ${item.adicionais[a].adicional.name}%0A`
+      }
+    }
+    {item.observacoes? pedidoFinal += `*Possui alguma observação?* ${item.observacoes}%0A%0A`: 
+    
+    pedidoFinal += `Valor: R$ ${item.burgerValue.toFixed(2)}%0A%0A`}
+  }
+  let somador = 0
+    for (let si = 0; si < pedido.length; si++) {
+      somador += pedido[si].burgerValue;
+    }
+
   
+
+  let MainUrl = "https://wa.me/5538997467203"
+  let url = `${MainUrl}?text=*Nome:* ${nome}%0A*Endereço:* ${endereco}, *N:* ${endNum}%0A*Bairro:* ${bairro}%0A*Complemento:* ${complemento}%0A*Telefone:* ${telefone}
+  %0A%0A*Pedido:*%0A${pedidoFinal}*Total: R$${(somador+3).toFixed(2)}*
+  %0A*Forma de pagamento:* ${dinheiro ? `Dinheiro.%0A*Precisa de troco?* ${dinheiro && isTroco ? `SIm%0A${dinheiro && trocoValue ? `*Para quanto?* ` : null}${trocoValue}` : `Não`}` :
+      `${cartao ? `Cartão de Débito/Crédito` : `${pix ? `Pix` : `Opção de pagamento não informada`}`}`}
+  `
+
 
   return (
     <>
@@ -133,6 +187,7 @@ function ModalOrder() {
         <GeneralInput
           type='text'
           value={nome}
+          placeholder='Joao'
           onChange={(e) => setNome(e.target.value)}
         />
         <AddressWrapper>
@@ -141,18 +196,27 @@ function ModalOrder() {
               <InputName>Endereço:</InputName>
               <GeneralInput
                 type='text'
+                placeholder='Rua X'
                 value={endereco}
                 onChange={(e) => setEndereco(e.target.value)}
               />
             </AddressDiv>
             <NumberDiv>
               <InputName>Número:</InputName>
-              <GeneralInput />
+              <GeneralInput
+                type='number'
+                placeholder='123'
+                value={endNum}
+                onChange={(e) => setEndNum(e.target.value)}
+              />
             </NumberDiv>
             <DistDiv>
               <InputName>Bairro:</InputName>
               <GeneralInput
                 type='text'
+                placeholder='Centro'
+                value={bairro}
+                onChange={(e) => setBairro(e.target.value)}
               />
             </DistDiv>
 
@@ -160,6 +224,9 @@ function ModalOrder() {
               <InputName>Complemento:</InputName>
               <GeneralInput
                 type='text'
+                placeholder='Ex: Primeiro Andar'
+                value={complemento}
+                onChange={(e) => setComplemento(e.target.value)}
               />
             </ComplDiv>
             <PhoneDiv>
@@ -176,8 +243,33 @@ function ModalOrder() {
       <SubMenuDiv>
         Forma de Pagamento
       </SubMenuDiv>
+      <RadioInput
+        dinheiro={dinheiro}
+        setDinheiro={setDinheiro}
+        isTroco={isTroco}
+        setIsTroco={setIsTroco}
+        trocoValue={trocoValue}
+        setTrocoValue={setTrocoValue}
+        setCartao={setCartao}
+        setPix={setPix}
+      />
 
-      <RadioInput />
+      {nome.length > 1 && endereco.length > 1 && endNum && telefone && bairro.length > 1 ?
+        
+        <AppLink
+
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer" >
+          <WhatsappBtn />
+        </AppLink>
+        :
+        <DisabledWABtn
+
+        />
+      }
+
+
     </>
   )
 

@@ -38,10 +38,15 @@ header {
 #h_description2 {
   text-align: center;
   font-size: 12px bold;
-  color: #27272A;
-  -webkit-text-stroke: 1px #f9fafb;
+  color: #f9fafb;
+  -webkit-text-stroke: 0.5px #FBBF24;
   font-family: "Inter", Helvetica;
   font-weight: bold;
+
+  @media(max-width:480px){
+    color: #27272A;
+    -webkit-text-stroke: 0px;
+  }
 }
 
 .sub-menus {

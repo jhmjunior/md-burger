@@ -13,6 +13,7 @@ function App() {
   const [showButton, setShowButton] = useState(true);
 
   const [pedido, setPedido] = useState([])
+  const [obsInfo, setObsInfo] = useState('')
   
 
   const handleShowChartModal = () => {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <>
-      <Modal showChartModal={showChartModal} pedido={pedido} setPedido={setPedido}setShowChartModal={handleShowChartModal} />
+      <Modal showChartModal={showChartModal} pedido={pedido} setPedido={setPedido}setShowChartModal={handleShowChartModal} obsInfo={obsInfo} setObsInfo={setObsInfo}/>
       <header>
         <img src={Logo} id='logo'></img>
         <div id='h_description1'>
@@ -38,8 +39,8 @@ function App() {
       </header>
       
       <div className='sub-menus'>Lanches</div>
-      <Cards setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido}/>
-      <ChartButton showButton={showButton} onClick={handleShowChartModal} pedido={pedido} setPedido={setPedido}>
+      <Cards setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo}/>
+      <ChartButton showButton={showButton} onClick={handleShowChartModal} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo}>
         <img className='carrinho-img' src={Carrinho}></img>Ver carrinho
       </ChartButton>
     </>

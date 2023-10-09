@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import ModalCards from '../modalCards/modalcards'
 import ModalChart from '../modalChart/modalChart'
@@ -10,15 +10,20 @@ const CloseModalButton = styled.div`
   height: 60px;
   padding-left: 14px;
   padding-top: 14px;
-  background-image: url('md-burger/images/Retornar.png');
+  background-image: url('/md-burger/images/Retornar.png');
   background-size: contain;
   
+  @media(max-width:620px){
+    height: 48px;
+    width: 48px;
+  }
+
   @media(max-width:480px){
       height: 25px;
       width: 25px;
       background-repeat: no-repeat;
-
   }
+
 
 `
 
@@ -31,17 +36,21 @@ const HeaderModal = styled.div`
   
   @media(max-width:480px){
     height: 50px;
-    
   }
 `
 
 const Title = styled.h1`
   font-size: 60px;
   font-family: "Inter", Helvetica;
+  @media(max-width:620px){
+    font-size: 48px;
+  }
+
   @media(max-width:480px){
     height: 30px;
     font-size: 25px;
   }
+  
 `
 
 
@@ -80,22 +89,11 @@ const ModalWrapper = styled.div`
 
 
 
-export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido, setShowOrder, showOrder }) => {
+export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido, setShowOrder, showOrder, obsInfo, setObsInfo }) => {
 
   const [adicional, setAdicional] = useState([])
 
-  const handleShowOrderModal = () => {
-    setShowOrder(prev =>!prev);
-  }
 
-  // useEffect(() => {
-  //   setAdicional(adcData.map((item) => {
-  //     return (0)
-  //   }))
-  // }, [])
-  // useEffect(() => {
-  //   console.log(adicional)
-  // }, [adicional])
 
   return (
     <>
@@ -117,6 +115,8 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
               pedido={pedido}
               setPedido={setPedido}
               title={title}
+              obsInfo={obsInfo}
+              setObsInfo={setObsInfo}
             />
           </ModalWrapper>
         </Background>
@@ -141,7 +141,7 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
               <CloseModalButton onClick={() => setShowOrder()} />
               <Title>Confirmar Pedido</Title>
             </HeaderModal>
-            <ModalOrder />
+            <ModalOrder pedido={pedido}/>
           </ModalWrapper>
         </Background>
       ) : null}

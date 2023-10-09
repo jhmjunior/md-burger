@@ -3,7 +3,7 @@ import './styles.css';
 import data from '../../assets/banners.json'
 import Card from "../card";
 
-function Cards({setShowButton, pedido, setPedido}) {
+function Cards({setShowButton, pedido, setPedido, obsInfo, setObsInfo}) {
 
   return (
     <div className='lanches-container'>
@@ -12,6 +12,8 @@ function Cards({setShowButton, pedido, setPedido}) {
           return(<Card
             pedido={pedido}
             setPedido={setPedido}
+            obsInfo={obsInfo}
+            setObsInfo={setObsInfo}
             key={item.title}
             title={item.title}
             description={item.description}

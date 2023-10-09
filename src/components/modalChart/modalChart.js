@@ -245,11 +245,7 @@ function ModalChart({ pedido, setPedido }) {
       </OrderButtonDiv>
       </>
       ) :<EmptyChart><h1>Seu carrinho está Vazio!</h1></EmptyChart>}
-      {/*
-        Criar componente para cada item do carrinho modalChart
-          (Map do pedido de item e index para novo componente)
-        Criar botão do whatsapp
-      */}
+
 
     </>
   )

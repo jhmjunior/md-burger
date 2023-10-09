@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "../modal/Modal";
 import './styles.css';
 
-function Card({ setShowButton, title, description, item_value, path_img, pedido, setPedido }) {
+function Card({ setShowButton, title, description, item_value, path_img, pedido, setPedido, obsInfo, setObsInfo }) {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -14,9 +14,19 @@ function Card({ setShowButton, title, description, item_value, path_img, pedido,
 
   return (
     <>
-      <Modal showModal={showModal} setShowModal={handleShowModal} title={title} description={description} itemImg={path_img} itemValue={item_value} setPedido={setPedido} pedido={pedido} />
+      <Modal 
+        showModal={showModal} 
+        setShowModal={handleShowModal} 
+        title={title} description={description} 
+        itemImg={path_img} itemValue={item_value} 
+        setPedido={setPedido} 
+        pedido={pedido} 
+        obsInfo={obsInfo}
+        setObsInfo={setObsInfo}
+      />
 
       <div className="card-lanche" onClick={() => {
+        setObsInfo('');
         handleShowModal();
       }}>
         <div className="lanche-details">

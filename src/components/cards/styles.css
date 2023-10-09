@@ -84,3 +84,13 @@
 
   }
 }
+
+@media(max-width:1220px){
+  .cards-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    row-gap: 8px;
+  }
+}
