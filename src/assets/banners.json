@@ -6,12 +6,6 @@
     "value": 15
   },
   {
-    "title": "Choripán | Terezinha",
-    "description": "Pão francês, linguiça suína, muçarela e chimichurri fresco.",
-    "path_img": "/md-burger/images/Choripan.png",
-    "value": 17
-  },
-  {
     "title": "Cheese Bacon",
     "description": "Pão de brioche, alface, tomate, burger artesanal, cheddar, cebola roxa filetada, bacon.",
     "path_img": "/md-burger/images/cheese-bacon-OG.jpeg",
@@ -30,9 +24,52 @@
     "value": 20
   },
   {
-    "title": "Double Smash Burger",
+    "title": "Smash Burger",
     "description": "Pão de brioche, 2 burgers artesanais, cheddar, cebola roxa filetada e bacon.",
     "path_img": "/md-burger/images/Double-Smash.png",
     "value": 25
+  }
+  ,
+  {
+    "title": "Mirim",
+    "description": "Pão de hamburguer, hamburguer e muçarela.",
+    "path_img": "/md-burger/images/logo_sf.png",
+    "value": 10
+  },
+  {
+    "title": "Da Casa - Hamburguer",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, hamburguer, muçarela, ovo, presunto e salsicha.",
+    "path_img": "/md-burger/images/da-casa.jpeg",
+    "value": 20
+  },
+  {
+    "title": "Da Casa - Frango",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de frango, muçarela, ovo, presunto e salsicha.",
+    "path_img": "/md-burger/images/logo_sf.png",
+    "value": 25
+  },
+  {
+    "title": "Da Casa - Pernil",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de pernil, muçarela, ovo, presunto e salsicha.",
+    "path_img": "/md-burger/images/logo_sf.png",
+    "value": 25
+  },
+  {
+    "title": "Da Casa - Contra Filé",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de contra filé, muçarela, ovo, presunto e salsicha.",
+    "path_img": "/md-burger/images/logo_sf.png",
+    "value": 34
+  },
+  {
+    "title": "M.D' Big (em 1 pão)",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de frango, bife de lombo, bife de contra filé, hamburguer, muçarela, ovo, presunto e salsicha.",
+    "path_img": "/md-burger/images/logo_sf.png",
+    "value": 40
+  },
+  {
+    "title": "M.D' Big (em 2 pães)",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de frango, bife de lombo, bife de contra filé, hamburguer, muçarela, ovo, presunto e salsicha.",
+    "path_img": "/md-burger/images/m.d.big.jpeg",
+    "value": 45
   }
 ]

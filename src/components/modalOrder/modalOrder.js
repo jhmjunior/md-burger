@@ -171,7 +171,7 @@ function ModalOrder({pedido}) {
 
   let MainUrl = "https://wa.me/5538997467203"
   let url = `${MainUrl}?text=*Nome:* ${nome}%0A*Endereço:* ${endereco}, *N:* ${endNum}%0A*Bairro:* ${bairro}%0A*Complemento:* ${complemento}%0A*Telefone:* ${telefone}
-  %0A%0A*Pedido:*%0A${pedidoFinal}*Total: R$${(somador+3).toFixed(2)}*
+  %0A%0A*Pedido:*%0A${pedidoFinal}*Total: R$${(somador+4).toFixed(2)}*
   %0A*Forma de pagamento:* ${dinheiro ? `Dinheiro.%0A*Precisa de troco?* ${dinheiro && isTroco ? `SIm%0A${dinheiro && trocoValue ? `*Para quanto?* ` : null}${trocoValue}` : `Não`}` :
       `${cartao ? `Cartão de Débito/Crédito` : `${pix ? `Pix` : `Opção de pagamento não informada`}`}`}
   `

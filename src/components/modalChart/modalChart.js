@@ -234,13 +234,13 @@ function ModalChart({ pedido, setPedido }) {
           </ChoiceDetailsContainer>)
         }) : null}
               <DeliveryTax>
-        Taxa de entrega: R$ 3,00
+        Taxa de entrega: R$ 4,00
       </DeliveryTax>
       </ChoiceContainer>
       
 
       <OrderButtonDiv>
-        <OrderTotal>Total: R${pedido.length > 0 ? (somador+3).toFixed(2) : null}</OrderTotal>
+        <OrderTotal>Total: R${pedido.length > 0 ? (somador+4).toFixed(2) : null}</OrderTotal>
         <OrderButton onClick={setShowOrder}>Confirmar pedido!</OrderButton>
       </OrderButtonDiv>
       </>
