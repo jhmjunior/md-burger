@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/md-burger/static/css/main.27b71e01.css",
+    "main.js": "/md-burger/static/js/main.b35a6684.js",
+    "static/media/Banner-mbl.png": "/md-burger/static/media/Banner-mbl.9b328a41c1d90021c45c.png",
+    "static/media/logo_sf.png": "/md-burger/static/media/logo_sf.21f8fc3b9b00168b4123.png",
+    "static/media/DisWhatsappBtn.png": "/md-burger/static/media/DisWhatsappBtn.b9552283f901512d09ff.png",
+    "static/media/Banner-dkt.png": "/md-burger/static/media/Banner-dkt.739fa90c5d372610ef90.png",
+    "static/media/WhatsApp.svg": "/md-burger/static/media/WhatsApp.6181e5cecd1a682846ba3e623621a869.svg",
+    "index.html": "/md-burger/index.html",
+    "main.27b71e01.css.map": "/md-burger/static/css/main.27b71e01.css.map",
+    "main.b35a6684.js.map": "/md-burger/static/js/main.b35a6684.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27b71e01.css",
+    "static/js/main.b35a6684.js"
+  ]
+}
