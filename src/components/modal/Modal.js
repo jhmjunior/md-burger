@@ -89,7 +89,7 @@ const ModalWrapper = styled.div`
 
 
 
-export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido, setShowOrder, showOrder, obsInfo, setObsInfo }) => {
+export const Modal = ({ showModal, setShowModal, title, description, itemImg, showChartModal, setShowChartModal, itemValue, setCarrinho, pedido, setPedido, setShowOrder, showOrder, obsInfo, setObsInfo, isDeliveryIncluded }) => {
 
   const [adicional, setAdicional] = useState([])
 
@@ -141,7 +141,7 @@ export const Modal = ({ showModal, setShowModal, title, description, itemImg, sh
               <CloseModalButton onClick={() => setShowOrder()} />
               <Title>Confirmar Pedido</Title>
             </HeaderModal>
-            <ModalOrder pedido={pedido}/>
+            <ModalOrder pedido={pedido} isDeliveryIncluded={isDeliveryIncluded}/>
           </ModalWrapper>
         </Background>
       ) : null}

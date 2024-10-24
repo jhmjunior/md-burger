@@ -29,12 +29,19 @@
     "path_img": "/md-burger/images/Double-Smash.png",
     "value": 25
   }
+
   ,
   {
     "title": "Mirim",
     "description": "Pão de hamburguer, hamburguer e muçarela.",
     "path_img": "/md-burger/images/logo_sf.png",
     "value": 10
+  },
+  {
+    "title": "Choripán Terezinha",
+    "description": "Pão francês especial, tomate, pernil, muçarela, molho chimichurri fresco.",
+    "path_img": "/md-burger/images/Choripan.png",
+    "value": 20
   },
   {
     "title": "Da Casa - Hamburguer",

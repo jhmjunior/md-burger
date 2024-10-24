@@ -131,7 +131,7 @@ const AppLink = styled.a`
   }
 `
 
-function ModalOrder({pedido}) {
+function ModalOrder({pedido, isDeliveryIncluded}) {
 
 
   const [nome, setNome] = useState('');
@@ -180,7 +180,7 @@ function ModalOrder({pedido}) {
   return (
     <>
       <SubMenuDiv>
-        Endereço de entrega:
+        {isDeliveryIncluded ? "Seus Dados" : "Endereço para entrega"}
       </SubMenuDiv>
       <MainContent>
         <InputName>Nome:</InputName>
@@ -190,6 +190,8 @@ function ModalOrder({pedido}) {
           placeholder='Joao'
           onChange={(e) => setNome(e.target.value)}
         />
+        {isDeliveryIncluded ? null:
+        
         <AddressWrapper>
           <AddressAlign>
             <AddressDiv>
@@ -239,6 +241,7 @@ function ModalOrder({pedido}) {
 
           </AddressAlign>
         </AddressWrapper>
+        }
       </MainContent>
       <SubMenuDiv>
         Forma de Pagamento
