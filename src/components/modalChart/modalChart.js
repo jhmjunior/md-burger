@@ -172,19 +172,50 @@ const EmptyChart = styled.div`
   align-items: center;
 `;
 
-const CheckBoxContainer = styled.div`
+
+
+const RadioButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  width: 99%;
   justify-content: center;
+  margin: 16px 0;
 `;
 
-const CheckBoxLabel = styled.label`
+const RadioButtonLabel = styled.label`
+  display: flex;
+  align-items: center;
   font-family: 'Inter', Helvetica;
-  color: #27272A;
-  margin-left: 8px;
   font-size: 18px;
+  color: #0E873A;
+  cursor: pointer;
+`;
+
+const RadioButtonInput = styled.input`
+  appearance: none;
+  // background-color: #fff;
+  border: 2px solid #0E873A;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:checked {
+    border-color: #0E873A;
+  }
+
+  &:checked::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0E873A;
+  }
 `;
 
 function ModalChart({ pedido, setPedido }) {
@@ -201,8 +232,8 @@ function ModalChart({ pedido, setPedido }) {
     setPedido(newPedido);
   };
 
-  const handleCheckboxChange = (e) => {
-    setIsDeliveryIncluded(e.target.checked);
+  const handleDeliveryOptionChange = (e) => {
+    setIsDeliveryIncluded(e.target.value === 'delivery');
   };
 
   return (
@@ -213,42 +244,52 @@ function ModalChart({ pedido, setPedido }) {
         <>
           <SubMenuDiv>Carrinho</SubMenuDiv>
           <ChoiceContainer>
-            {pedido.length > 0
-              ? pedido.map((item, index) => {
-                  return (
-                    <ChoiceDetailsContainer key={index}>
-                      <ChoiceItems>
-                        {item.burgerName}{' '}
-                        <ChoicePrice>Total: R${item.burgerValue.toFixed(2)}</ChoicePrice>
-                      </ChoiceItems>
-                      {item.adicionais.map((item, index) => {
-                        return item.quantidade > 0 ? (
-                          <ChoiceAdds key={index}>
-                            {item.quantidade}X {item.adicional.name}
-                          </ChoiceAdds>
-                        ) : null;
-                      })}
-                      <ButtonContainer>
-                        <RemoveItemBtn onClick={() => removeItem(index)}>Remover</RemoveItemBtn>
-                      </ButtonContainer>
-                    </ChoiceDetailsContainer>
-                  );
-                })
-              : null}
+            {pedido.map((item, index) => (
+              <ChoiceDetailsContainer key={index}>
+                <ChoiceItems>
+                  {item.burgerName}{' '}
+                  <ChoicePrice>Total: R${item.burgerValue.toFixed(2)}</ChoicePrice>
+                </ChoiceItems>
+                {item.adicionais.map((adicional, index) =>
+                  adicional.quantidade > 0 ? (
+                    <ChoiceAdds key={index}>
+                      {adicional.quantidade}X {adicional.adicional.name}
+                    </ChoiceAdds>
+                  ) : null
+                )}
+                <ButtonContainer>
+                  <RemoveItemBtn onClick={() => removeItem(index)}>Remover</RemoveItemBtn>
+                </ButtonContainer>
+              </ChoiceDetailsContainer>
+            ))}
             
             {!isDeliveryIncluded && <DeliveryTax>Taxa de entrega: R$ 4,00</DeliveryTax>}
           </ChoiceContainer>
-          <CheckBoxContainer>
-              <input
-                type="checkbox"
-                id="deliveryCheckbox"
-                checked={isDeliveryIncluded}
-                onChange={handleCheckboxChange}
-              />
-              <CheckBoxLabel htmlFor="deliveryCheckbox">Vou Retirar</CheckBoxLabel>
-            </CheckBoxContainer>
-          <OrderButtonDiv>
+          
+          <RadioButtonContainer>
+            <RadioButtonInput
+              type="radio"
+              id="deliveryOption"
+              name="deliveryOption"
+              value="delivery"
+              checked={isDeliveryIncluded}
+              onChange={handleDeliveryOptionChange}
+            />
+            <RadioButtonLabel htmlFor="deliveryOption">Entrega</RadioButtonLabel>
             
+            <RadioButtonInput
+              type="radio"
+              id="pickupOption"
+              name="deliveryOption"
+              value="pickup"
+              checked={!isDeliveryIncluded}
+              onChange={handleDeliveryOptionChange}
+              style={{ marginLeft: '16px' }}
+            />
+            <RadioButtonLabel htmlFor="pickupOption">Vou Retirar</RadioButtonLabel>
+          </RadioButtonContainer>
+
+          <OrderButtonDiv>
             <OrderTotal>
               Total: R$
               {pedido.length > 0
@@ -257,7 +298,7 @@ function ModalChart({ pedido, setPedido }) {
                   : somador.toFixed(2)
                 : null}
             </OrderTotal>
-            <OrderButton onClick={setShowOrder}>Confirmar pedido!</OrderButton>
+            <OrderButton onClick={() => setShowOrder(true)}>Confirmar pedido!</OrderButton>
           </OrderButtonDiv>
         </>
       ) : (
