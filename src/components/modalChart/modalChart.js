@@ -272,7 +272,7 @@ function ModalChart({ pedido, setPedido }) {
               id="deliveryOption"
               name="deliveryOption"
               value="delivery"
-              checked={isDeliveryIncluded}
+              checked={!isDeliveryIncluded}
               onChange={handleDeliveryOptionChange}
             />
             <RadioButtonLabel htmlFor="deliveryOption">Entrega</RadioButtonLabel>
@@ -282,7 +282,7 @@ function ModalChart({ pedido, setPedido }) {
               id="pickupOption"
               name="deliveryOption"
               value="pickup"
-              checked={!isDeliveryIncluded}
+              checked={isDeliveryIncluded}
               onChange={handleDeliveryOptionChange}
               style={{ marginLeft: '16px' }}
             />
