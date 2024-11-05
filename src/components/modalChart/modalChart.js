@@ -263,7 +263,7 @@ function ModalChart({ pedido, setPedido }) {
               </ChoiceDetailsContainer>
             ))}
             
-            {!isDeliveryIncluded && <DeliveryTax>Taxa de entrega: R$ 4,00</DeliveryTax>}
+            {!isDeliveryIncluded && <DeliveryTax>Taxa de entrega: R$ 5,00</DeliveryTax>}
           </ChoiceContainer>
           
           <RadioButtonContainer>
@@ -294,7 +294,7 @@ function ModalChart({ pedido, setPedido }) {
               Total: R$
               {pedido.length > 0
                 ? !isDeliveryIncluded
-                  ? (somador + 4).toFixed(2)
+                  ? (somador + 5).toFixed(2)
                   : somador.toFixed(2)
                 : null}
             </OrderTotal>

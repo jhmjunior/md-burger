@@ -4,29 +4,44 @@
     "value": 8,
     "ID": "000"
   },
-
   {
     "name": "Cheddar",
     "value": 4,
     "ID": "001"
   },
-
   {
     "name": "Muçarela",
     "value": 4,
     "ID": "002"
   },
-
   {
     "name": "Bacon",
     "value": 4,
     "ID": "003"
   },
-
-
+  {
+    "name": "Molho: Maionese de Bacon",
+    "value": 3,
+    "ID": "004"
+  },
+  {
+    "name": "Molho: Maionese de Alho",
+    "value": 3,
+    "ID": "005"
+  },
+  {
+    "name": "Molho: Mostarda e mel",
+    "value": 3,
+    "ID": "006"
+  },
+  {
+    "name": "Molho: Barbecue",
+    "value": 3,
+    "ID": "007"
+  },
   {
     "name": "Refrigerante Lata",
     "value": 5,
-    "ID": "005"
+    "ID": "008"
   }
 ]

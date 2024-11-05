@@ -33,7 +33,7 @@ function ChartButton({onClick, showButton}) {
       {showButton ? (
         <ButtonDiv>
           <Button onClick={onClick}>
-            <img className='carrinho-img' src={Carrinho}></img>Ver carrinho
+            <img className='carrinho-img' src={Carrinho} />Ver carrinho
           </Button>
         </ButtonDiv>
 
