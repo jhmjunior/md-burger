@@ -263,7 +263,7 @@ function ModalChart({ pedido, setPedido }) {
               </ChoiceDetailsContainer>
             ))}
             
-            {!isDeliveryIncluded && <DeliveryTax>Taxa de entrega: R$ 5,00</DeliveryTax>}
+            {isDeliveryIncluded && <DeliveryTax>Taxa de entrega: R$ 5,00</DeliveryTax>}
           </ChoiceContainer>
           
           <RadioButtonContainer>
@@ -272,7 +272,7 @@ function ModalChart({ pedido, setPedido }) {
               id="deliveryOption"
               name="deliveryOption"
               value="delivery"
-              checked={!isDeliveryIncluded}
+              checked={isDeliveryIncluded}
               onChange={handleDeliveryOptionChange}
             />
             <RadioButtonLabel htmlFor="deliveryOption">Entrega</RadioButtonLabel>
@@ -282,7 +282,7 @@ function ModalChart({ pedido, setPedido }) {
               id="pickupOption"
               name="deliveryOption"
               value="pickup"
-              checked={isDeliveryIncluded}
+              checked={!isDeliveryIncluded}
               onChange={handleDeliveryOptionChange}
               style={{ marginLeft: '16px' }}
             />
@@ -293,7 +293,7 @@ function ModalChart({ pedido, setPedido }) {
             <OrderTotal>
               Total: R$
               {pedido.length > 0
-                ? !isDeliveryIncluded
+                ? isDeliveryIncluded
                   ? (somador + 5).toFixed(2)
                   : somador.toFixed(2)
                 : null}
