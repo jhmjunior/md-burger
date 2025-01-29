@@ -5,43 +5,63 @@
     "ID": "000"
   },
   {
-    "name": "Cheddar",
-    "value": 4,
-    "ID": "001"
+    "name": "Carne",
+    "value": 10,
+    "ID": "001",
+    "option": {
+      "frango" : "Hamburger artesanal de frango",
+      "pernil" : "Hamburger artesanal de pernil",
+      "costela" : "Hamburger artesanal de costela"
+    }
   },
   {
-    "name": "Muçarela",
+    "name": "Cheddar",
     "value": 4,
     "ID": "002"
   },
   {
-    "name": "Bacon",
+    "name": "Muçarela",
     "value": 4,
     "ID": "003"
   },
   {
-    "name": "Molho: Maionese de Bacon",
-    "value": 3,
+    "name": "Bacon",
+    "value": 4,
     "ID": "004"
   },
   {
-    "name": "Molho: Maionese de Alho",
-    "value": 3,
+    "name": "Molho: Maionese de Bacon",
+    "value": 2,
     "ID": "005"
   },
   {
-    "name": "Molho: Mostarda e mel",
-    "value": 3,
+    "name": "Molho de Alho",
+    "value": 2,
     "ID": "006"
   },
   {
-    "name": "Molho: Barbecue",
-    "value": 3,
+    "name": "Molho: Mostarda e mel",
+    "value": 2,
     "ID": "007"
+  },
+  {
+    "name": "Molho: Barbecue",
+    "value": 2,
+    "ID": "008"
+  },
+  {
+    "name": "Molho: Ketchup e Maionese",
+    "value": 2,
+    "ID": "009"
   },
   {
     "name": "Refrigerante Lata",
     "value": 5,
-    "ID": "008"
+    "ID": "010",
+    "option": {
+      "coca" : "Coca Cola",
+      "guarana": "Guaraná",
+      "zero": "Coca Zero"
+    }
   }
 ]

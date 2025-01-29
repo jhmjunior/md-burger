@@ -13,35 +13,27 @@
   },
   {
     "title": "Salad Bacon",
-    "description": "Pão de brioche, alface, tomate, burger artesanal, muçarela, cebola filetada, picles e bacon.",
+    "description": "Pão de brioche, alface, tomate, burger artesanal, muçarela, cebola filetada e bacon.",
     "path_img": "/md-burger/images/Salad-Bacon.png",
     "value": 20
   },
   {
     "title": "Bacon Onion",
-    "description": "Pão de brioche, burger artesanal, cheddar, cebola caramelizada, picles e bacon.",
+    "description": "Pão de brioche, burger artesanal, cheddar, cebola caramelizada e bacon.",
     "path_img": "/md-burger/images/Bacon-Onion-OG.jpeg",
-    "value": 20
+    "value": 22
   },
   {
     "title": "Smash Burger",
     "description": "Pão de brioche, 2 burgers artesanais, cheddar, cebola roxa filetada e bacon.",
     "path_img": "/md-burger/images/Double-Smash.png",
-    "value": 25
-  }
-
-  ,
-  {
-    "title": "Mirim",
-    "description": "Pão de hamburguer, hamburguer e muçarela.",
-    "path_img": "/md-burger/images/Mirim.jpg",
-    "value": 10
+    "value": 27
   },
   {
-    "title": "Choripán Terezinha",
-    "description": "Pão francês especial, tomate, pernil, muçarela, molho chimichurri fresco.",
-    "path_img": "/md-burger/images/Choripan.png",
-    "value": 20
+    "title": "Mirim",
+    "description": "Pão de hamburguer, hamburguer, muçarela, presunto e batata palha.",
+    "path_img": "/md-burger/images/Mirim.jpg",
+    "value": 12
   },
   {
     "title": "Da Casa - Hamburguer",
@@ -51,32 +43,26 @@
   },
   {
     "title": "Da Casa - Frango",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de frango, muçarela, ovo, presunto e salsicha.",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de frango, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da_casa_frango.jpg",
     "value": 25
   },
   {
     "title": "Da Casa - Pernil",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de pernil, muçarela, ovo, presunto e salsicha.",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de pernil, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da_casa_pernil.jpg",
     "value": 25
   },
   {
-    "title": "Da Casa - Contra Filé",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de contra filé, muçarela, ovo, presunto e salsicha.",
+    "title": "Da Casa - Artesanal",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de costela, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da_casa_contra.jpg",
-    "value": 34
+    "value": 28
   },
   {
-    "title": "M.D' Big (em 1 pão)",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de frango, bife de lombo, bife de contra filé, hamburguer, muçarela, ovo, presunto e salsicha.",
+    "title": "M.D' Big",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de frango, burger artesanal de pernil, burger artesanal de costela, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/m.d.big_1_pao.jpg",
-    "value": 40
-  },
-  {
-    "title": "M.D' Big (em 2 pães)",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife de frango, bife de lombo, bife de contra filé, hamburguer, muçarela, ovo, presunto e salsicha.",
-    "path_img": "/md-burger/images/m.d.big.jpeg",
-    "value": 45
+    "value": 38
   }
 ]
