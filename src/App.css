@@ -61,6 +61,19 @@ header {
   color: #27272A;
 }
 
+.combo-menus {
+  margin-top: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #FBBF24;
+  font-size: 20px;
+  justify-content: center;
+  font-family: "Inter", Helvetica;
+  font-weight: bold;
+  color: #27272A;
+}
+
 
 .carrinho-img {
   width: 29px;

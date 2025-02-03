@@ -27,12 +27,16 @@ const ModalContent = styled.div`
 `
 
 const ItemImage = styled.img`
-  width: 90%;
+  width: 400px;
+  max-width: 90%;
   height: 90%;
+  max-height: 90%;
   
   @media(max-width:480px){
     width: 250px;
+    max-width: 250px;
     height: 250px;
+    max-width: 250px;
     align-self: center;
   }
 `

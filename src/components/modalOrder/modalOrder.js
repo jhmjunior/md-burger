@@ -152,7 +152,7 @@ function ModalOrder({pedido, isDeliveryIncluded}) {
     const item = pedido[i]
     
 
-    pedidoFinal += `*Lanche:* ${item.burgerName}%0A`
+    pedidoFinal += `*Item:* ${item.burgerName}%0A`
     for (let a = 0; a < item.adicionais.length; a++) {
       if (item.adicionais[a].quantidade > 0) {
         pedidoFinal += `*Adicionais:*%0A${item.adicionais[a].quantidade}X ${item.adicionais[a].adicional.name}%0A`

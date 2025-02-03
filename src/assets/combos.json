@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Combo 1",
+    "description": "3x da casa",
+    "path_img": "/md-burger/images/Promo1.png",
+    "value": 50
+  },
+  {
+    "title": "Combo 2",
+    "description": "2x da casa, guaraná 1l, entrega gratis",
+    "path_img": "/md-burger/images/Promo2.png",
+    "value": 50
+  }
+  
+]

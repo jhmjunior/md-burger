@@ -53,15 +53,5 @@
     "name": "Molho: Ketchup e Maionese",
     "value": 2,
     "ID": "009"
-  },
-  {
-    "name": "Refrigerante Lata",
-    "value": 5,
-    "ID": "010",
-    "option": {
-      "coca" : "Coca Cola",
-      "guarana": "Guaraná",
-      "zero": "Coca Zero"
-    }
   }
 ]

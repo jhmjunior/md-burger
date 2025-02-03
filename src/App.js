@@ -5,6 +5,8 @@ import Carrinho from '../src/assets/carrinho.png'
 import Cards from './components/cards/Cards';
 import { Modal } from "./components/modal/Modal";
 import ChartButton from './components/Buttons/ChartButton';
+import Combos from './components/combos/Combos';
+import ExtraItems from './components/extraItems/ExtraItems';
 
 
 function App() {
@@ -40,9 +42,15 @@ function App() {
       
       <div className='sub-menus'>Lanches</div>
       <Cards setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo}/>
+      <div className='combo-menus'>Combos</div>
+      <Combos setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo} />
+      <div className='combo-menus'>Acompanhamentos</div>
+      <ExtraItems setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo} />
       <ChartButton showButton={showButton} onClick={handleShowChartModal} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo}>
         <img className='carrinho-img' src={Carrinho}></img>Ver carrinho
       </ChartButton>
+
+
     </>
   )
 }

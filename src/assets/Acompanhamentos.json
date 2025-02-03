@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Coca Lata",
+    "description": "Refrigerante Coca Cola lata de 350ml",
+    "path_img": "/md-burger/images/CocaLata.png",
+    "value": 5
+  },
+  {
+    "title": "Guaraná Lata",
+    "description": "Refrigerante Guaraná de 350ml",
+    "path_img": "/md-burger/images/guaranaLata.png",
+    "value": 5
+  },
+  {
+    "title": "Guaraná 1l",
+    "description": "Refrigerante Guaraná de 1 litro",
+    "path_img": "/md-burger/images/guarana1L.png",
+    "value": 8
+  },
+  {
+    "title": "Guaraná 2l",
+    "description": "Refrigerante Guaraná de 2 litros",
+    "path_img": "/md-burger/images/guarana2L.png",
+    "value": 14
+  },
+  {
+    "title": "Coca 2l",
+    "description": "Refrigerante Coca cola de 2 litros",
+    "path_img": "/md-burger/images/coca2L.png",
+    "value": 14
+  }
+  
+]
