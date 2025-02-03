@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/md-burger/static/css/main.2f190039.css",
-    "main.js": "/md-burger/static/js/main.9b06eb6f.js",
+    "main.css": "/md-burger/static/css/main.b1c89fbb.css",
+    "main.js": "/md-burger/static/js/main.634a917a.js",
     "static/media/Banner-mbl.png": "/md-burger/static/media/Banner-mbl.9b328a41c1d90021c45c.png",
     "static/media/logo_sf.png": "/md-burger/static/media/logo_sf.21f8fc3b9b00168b4123.png",
     "static/media/DisWhatsappBtn.png": "/md-burger/static/media/DisWhatsappBtn.b9552283f901512d09ff.png",
     "static/media/Banner-dkt.png": "/md-burger/static/media/Banner-dkt.739fa90c5d372610ef90.png",
     "static/media/WhatsApp.svg": "/md-burger/static/media/WhatsApp.6181e5cecd1a682846ba3e623621a869.svg",
     "index.html": "/md-burger/index.html",
-    "main.2f190039.css.map": "/md-burger/static/css/main.2f190039.css.map",
-    "main.9b06eb6f.js.map": "/md-burger/static/js/main.9b06eb6f.js.map"
+    "main.b1c89fbb.css.map": "/md-burger/static/css/main.b1c89fbb.css.map",
+    "main.634a917a.js.map": "/md-burger/static/js/main.634a917a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f190039.css",
-    "static/js/main.9b06eb6f.js"
+    "static/css/main.b1c89fbb.css",
+    "static/js/main.634a917a.js"
   ]
 }
