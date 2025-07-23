@@ -236,6 +236,10 @@ function ModalChart({ pedido, setPedido }) {
     setIsDeliveryIncluded(e.target.value === 'delivery');
   };
 
+  const hasComboItem = pedido.some((item) => item.burgerName.includes('Combo 2'));
+
+
+
   return (
     <>
       <Modal pedido={pedido} isDeliveryIncluded={isDeliveryIncluded} showOrder={showOrder} setShowOrder={setShowOrder} />
@@ -263,7 +267,7 @@ function ModalChart({ pedido, setPedido }) {
               </ChoiceDetailsContainer>
             ))}
             
-            {isDeliveryIncluded && <DeliveryTax>Taxa de entrega: Gratis</DeliveryTax>}
+            {isDeliveryIncluded && <DeliveryTax>Taxa de entrega: {hasComboItem ? "Grátis" : "R$ 5,00"}</DeliveryTax>}
           </ChoiceContainer>
           
           <RadioButtonContainer>
@@ -293,8 +297,8 @@ function ModalChart({ pedido, setPedido }) {
             <OrderTotal>
               Total: R$
               {pedido.length > 0
-                ? isDeliveryIncluded
-                  ? (somador + 0).toFixed(2)
+                ? isDeliveryIncluded && !hasComboItem
+                  ? (somador + 5).toFixed(2)
                   : somador.toFixed(2)
                 : null}
             </OrderTotal>
