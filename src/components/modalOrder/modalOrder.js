@@ -164,7 +164,7 @@ function ModalOrder({ pedido, isDeliveryIncluded }) {
   }
 
   const hasComboItem = pedido.some((item) =>
-    item.burgerName.includes("Combo 2")
+    item.burgerName.includes("Combo")
   );
 
   let MainUrl = "https://wa.me/5538997467203";

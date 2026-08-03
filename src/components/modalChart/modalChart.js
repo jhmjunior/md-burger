@@ -236,7 +236,7 @@ function ModalChart({ pedido, setPedido }) {
     setIsDeliveryIncluded(e.target.value === 'delivery');
   };
 
-  const hasComboItem = pedido.some((item) => item.burgerName.includes('Combo 2'));
+  const hasComboItem = pedido.some((item) => item.burgerName.includes('Combo'));
 
 
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "../modal/Modal";
 import './styles.css';
 
-function Card({ setShowButton, title, description, item_value, path_img, pedido, setPedido, obsInfo, setObsInfo }) {
+function Card({ setShowButton, title, description, item_value, path_img, pedido, setPedido, obsInfo, setObsInfo, externalItem }) {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -14,13 +14,13 @@ function Card({ setShowButton, title, description, item_value, path_img, pedido,
 
   return (
     <>
-      <Modal 
-        showModal={showModal} 
-        setShowModal={handleShowModal} 
-        title={title} description={description} 
-        itemImg={path_img} itemValue={item_value} 
-        setPedido={setPedido} 
-        pedido={pedido} 
+      <Modal
+        showModal={showModal}
+        setShowModal={handleShowModal}
+        title={title} description={description}
+        itemImg={path_img} itemValue={item_value}
+        setPedido={setPedido}
+        pedido={pedido}
         obsInfo={obsInfo}
         setObsInfo={setObsInfo}
       />
@@ -38,7 +38,9 @@ function Card({ setShowButton, title, description, item_value, path_img, pedido,
           </div>
           <div className='valor-lanche'>R${item_value}</div>
         </div>
-        <img className='cards-img' src={path_img}></img>
+        {externalItem ? null :
+          <img className='cards-img' src={path_img} />
+        }
       </div>
     </>
   )

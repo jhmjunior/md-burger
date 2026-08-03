@@ -44,7 +44,7 @@ function App() {
       <Cards setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo}/>
       <div className='combo-menus'>Combos</div>
       <Combos setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo} />
-      <div className='combo-menus'>Acompanhamentos</div>
+      <div className='combo-menus'>Bebidas</div>
       <ExtraItems setShowButton={handleShowButton} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo} />
       <ChartButton showButton={showButton} onClick={handleShowChartModal} pedido={pedido} setPedido={setPedido} obsInfo={obsInfo} setObsInfo={setObsInfo}>
         <img className='carrinho-img' src={Carrinho}></img>Ver carrinho

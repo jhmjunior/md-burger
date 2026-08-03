@@ -1,67 +1,73 @@
 [
   {
+    "title": "Mirim",
+    "description": "Pão de hamburguer, hamburguer, muçarela, presunto e batata palha.",
+    "path_img": "/md-burger/images/mirim.jpeg",
+    "value": 14
+  },
+  {
     "title": "Cheese Burger",
-    "description": "Pão de brioche, burger artesanal, cheddar, cebola filetada e molho especial da casa.",
+    "description": "Pão de brioche, hamburger artesanal de costela 100g, cheddar, cebola filetada e barbecue.",
     "path_img": "/md-burger/images/cheese-burger-OG.jpeg",
-    "value": 15
+    "value": 18
   },
   {
     "title": "Cheese Bacon",
-    "description": "Pão de brioche, alface, tomate, burger artesanal, cheddar, cebola roxa filetada, bacon.",
+    "description": "Pão de brioche, alface, tomate,  hamburger artesanal de costela 100g, cheddar, cebola roxa filetada, bacon.",
     "path_img": "/md-burger/images/cheese-bacon-OG.jpeg",
-    "value": 20
+    "value": 23
   },
   {
     "title": "Salad Bacon",
-    "description": "Pão de brioche, alface, tomate, burger artesanal, muçarela, cebola filetada e bacon.",
+    "description": "Pão de brioche, alface, tomate,  hamburger artesanal de costela 100g, muçarela, cebola filetada e bacon.",
     "path_img": "/md-burger/images/Salad-Bacon.png",
-    "value": 20
+    "value": 23
   },
   {
     "title": "Bacon Onion",
-    "description": "Pão de brioche, burger artesanal, cheddar, cebola caramelizada e bacon.",
+    "description": "Pão de brioche, hamburger artesanal de costela 100g, cheddar, cebola caramelizada e bacon.",
     "path_img": "/md-burger/images/Bacon-Onion-OG.jpeg",
-    "value": 22
+    "value": 25
   },
   {
     "title": "Smash Burger",
-    "description": "Pão de brioche, 2 burgers artesanais, cheddar, cebola roxa filetada e bacon.",
+    "description": "Pão de brioche, 2 hamburgers artesanais de costela 100g, cheddar, cebola roxa filetada e bacon.",
     "path_img": "/md-burger/images/Double-Smash.png",
-    "value": 27
-  },
-  {
-    "title": "Mirim",
-    "description": "Pão de hamburguer, hamburguer, muçarela, presunto e batata palha.",
-    "path_img": "/md-burger/images/Mirim.jpg",
-    "value": 12
+    "value": 32
   },
   {
     "title": "Da Casa - Hamburguer",
     "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, hamburguer, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da-casa.jpeg",
-    "value": 20
+    "value": 24
   },
   {
     "title": "Da Casa - Frango",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de frango, muçarela, ovo, presunto e salsicha.",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife artesanal de frango 130g, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da_casa_frango.jpg",
-    "value": 25
+    "value": 27
   },
   {
     "title": "Da Casa - Pernil",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de pernil, muçarela, ovo, presunto e salsicha.",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, bife artesanal de pernil 130g, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da_casa_pernil.jpg",
-    "value": 25
+    "value": 27
   },
   {
     "title": "Da Casa - Artesanal",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de costela, muçarela, ovo, presunto e salsicha.",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, hamburger artesanal de costela 100g, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/da_casa_contra.jpg",
-    "value": 28
+    "value": 30
+  },
+  {
+    "title": "M.D' Ribs 4 Cheese",
+    "description": "Pão de hamburguer, cream cheese, hamburguer artesanal de costela 100g, queijo muçarela, quejo cheddar, queijo provolone e bacon",
+    "path_img": "/md-burger/images/m.d.ribs.jpeg",
+    "value": 33
   },
   {
     "title": "M.D' Big",
-    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, burger artesanal de frango, burger artesanal de pernil, burger artesanal de costela, muçarela, ovo, presunto e salsicha.",
+    "description": "Pão de hamburguer, alface, tomate, milho, batata palha, bacon, hamburger artesanal de costela 100g, hamburger artesanal de pernil 130g, hamburger artesanal de costela 100g, muçarela, ovo, presunto e salsicha.",
     "path_img": "/md-burger/images/m.d.big_1_pao.jpg",
     "value": 38
   }

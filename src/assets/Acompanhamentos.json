@@ -1,33 +1,32 @@
 [
   {
-    "title": "Coca Lata",
-    "description": "Refrigerante Coca Cola lata de 350ml",
+    "title": "Suco natural 300ml",
+    "description": "300ml de suco natural de laranja",
+    "path_img": "/md-burger/images/Suco.jpeg",
+    "value": 8
+  },
+  {
+    "title": "Refri Lata",
+    "description": "Selecione a opção no atendimento",
     "path_img": "/md-burger/images/CocaLata.png",
-    "value": 5
+    "value": 6
   },
   {
-    "title": "Guaraná Lata",
-    "description": "Refrigerante Guaraná de 350ml",
-    "path_img": "/md-burger/images/guaranaLata.png",
-    "value": 5
-  },
-  {
-    "title": "Guaraná 1l",
-    "description": "Refrigerante Guaraná de 1 litro",
+    "title": "Guaraná litro",
+    "description": "Guaraná de 1 litro",
     "path_img": "/md-burger/images/Guarana1L.png",
     "value": 8
   },
   {
-    "title": "Guaraná 2l",
-    "description": "Refrigerante Guaraná de 2 litros",
+    "title": "Refri dois litros",
+    "description": "Selecione a opção no atendimento",
     "path_img": "/md-burger/images/guarana2L.png",
-    "value": 14
+    "value": 15
   },
   {
-    "title": "Coca 2l",
-    "description": "Refrigerante Coca cola de 2 litros",
-    "path_img": "/md-burger/images/coca2L.png",
-    "value": 14
+    "title": "Cerveja latão",
+    "description": "Selecione a opção no atendimento",
+    "path_img": "/md-burger/images/latao.png",
+    "value": 10
   }
-  
 ]

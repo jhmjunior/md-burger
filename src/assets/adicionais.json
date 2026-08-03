@@ -1,57 +1,87 @@
 [
   {
-    "name": "Hamburger",
+    "name": "Hamburger industrial",
     "value": 8,
     "ID": "000"
   },
   {
-    "name": "Carne",
-    "value": 10,
+    "name": "Hamburguer artesanal (frango, pernil ou costela)",
+    "value": 12,
     "ID": "001",
     "option": {
-      "frango" : "Hamburger artesanal de frango",
-      "pernil" : "Hamburger artesanal de pernil",
-      "costela" : "Hamburger artesanal de costela"
+      "frango": "Hamburger artesanal de frango",
+      "pernil": "Hamburger artesanal de pernil",
+      "costela": "Hamburger artesanal de costela"
     }
   },
   {
-    "name": "Cheddar",
+    "name": "Cream cheese ou provolone",
+    "value": 9,
+    "ID": "002",
+    "option": {
+      "creamCheese": "Cream cheese",
+      "provolone": "Provolone"
+    }
+  },
+  {
+    "name": "Queijo cheddar ou muçarela",
+    "value": 5,
+    "ID": "003",
+    "option": {
+      "cheddar": "Cheddar",
+      "mucarela": "Muçarela"
+    }
+  },
+  {
+    "name": "Bacon ou presunto",
     "value": 4,
-    "ID": "002"
+    "ID": "004",
+    "option": {
+      "bacon": "Bacon",
+      "presunto": "Presunto"
+    }
   },
   {
-    "name": "Muçarela",
-    "value": 4,
-    "ID": "003"
+    "name": "Ovo ou salsicha",
+    "value": 3,
+    "ID": "005",
+    "option": {
+      "ovo": "Ovo",
+      "salsicha": "Salsicha"
+    }
   },
   {
-    "name": "Bacon",
-    "value": 4,
-    "ID": "004"
-  },
-  {
-    "name": "Molho: Maionese de Bacon",
-    "value": 2,
-    "ID": "005"
-  },
-  {
-    "name": "Molho de Alho",
+    "name": "Batata palha",
     "value": 2,
     "ID": "006"
   },
   {
-    "name": "Molho: Mostarda e mel",
-    "value": 2,
+    "name": "Cebola caramelizada",
+    "value": 3,
     "ID": "007"
   },
   {
-    "name": "Molho: Barbecue",
-    "value": 2,
-    "ID": "008"
+    "name": "Alface, tomate, cebola ou milho",
+    "value": 1,
+    "ID": "008",
+    "option": {
+      "alface": "Alface",
+      "tomate": "Tomate",
+      "cebola": "Cebola",
+      "milho": "Milho"
+    }
   },
   {
-    "name": "Molho: Ketchup e Maionese",
+    "name": "Molho (alho, barbecue, ketchup, mostarda, mostarda e mel ou maionese)",
     "value": 2,
-    "ID": "009"
+    "ID": "009",
+    "option": {
+      "alho": "Molho de alho",
+      "barbecue": "Molho barbecue",
+      "ketchup": "Ketchup",
+      "mostarda": "Mostarda",
+      "mostardaMel": "Mostarda e mel",
+      "maionese": "Maionese"
+    }
   }
 ]

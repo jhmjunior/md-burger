@@ -20,6 +20,7 @@ function ExtraItems({setShowButton, pedido, setPedido, obsInfo, setObsInfo}) {
             item_value={parseInt(item.value).toFixed(2)}
             path_img={item.path_img}
             setShowButton={setShowButton}
+            externalItem={true}
           />)
         })}
         
